@@ -69,13 +69,17 @@
 
 
 
-<meta property="og:type" content="website">
+<meta name="description" content="前端支持换肤功能当前现状目前只能加载一套css文件 存在问题不支持换肤功能，不够灵活 目标组件库及平台支持换肤功能，能够灵活的增加/切换皮肤 方案分析公共资源文件不进行webpack打包，单独引入将vue、vue-router、vuex、element不进行打包  element.js未成功，css可单独引入 app.js原有大小为5315行  element组件库支持产出不同主题 颜色变量文件p">
+<meta property="og:type" content="article">
 <meta property="og:title" content="吾日三省吾身">
-<meta property="og:url" content="https://liuyuekai.github.io/DailySummary-web/index.html">
+<meta property="og:url" content="https://liuyuekai.github.io/DailySummary-web/2017/09/30/2、前端支持换肤功能/index.html">
 <meta property="og:site_name" content="吾日三省吾身">
+<meta property="og:description" content="前端支持换肤功能当前现状目前只能加载一套css文件 存在问题不支持换肤功能，不够灵活 目标组件库及平台支持换肤功能，能够灵活的增加/切换皮肤 方案分析公共资源文件不进行webpack打包，单独引入将vue、vue-router、vuex、element不进行打包  element.js未成功，css可单独引入 app.js原有大小为5315行  element组件库支持产出不同主题 颜色变量文件p">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2017-09-08T02:56:40.582Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="吾日三省吾身">
+<meta name="twitter:description" content="前端支持换肤功能当前现状目前只能加载一套css文件 存在问题不支持换肤功能，不够灵活 目标组件库及平台支持换肤功能，能够灵活的增加/切换皮肤 方案分析公共资源文件不进行webpack打包，单独引入将vue、vue-router、vuex、element不进行打包  element.js未成功，css可单独引入 app.js原有大小为5315行  element组件库支持产出不同主题 颜色变量文件p">
 
 
 
@@ -105,13 +109,13 @@
 
 
 
-  <link rel="canonical" href="https://liuyuekai.github.io/DailySummary-web/"/>
+  <link rel="canonical" href="https://liuyuekai.github.io/DailySummary-web/2017/09/30/2、前端支持换肤功能/"/>
 
 
 
 
 
-  <title>吾日三省吾身</title>
+  <title> | 吾日三省吾身</title>
   
 
 
@@ -130,8 +134,7 @@
     
   
 
-  <div class="container sidebar-position-left 
-  page-home">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -242,9 +245,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
 
@@ -274,9 +277,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/DailySummary-web/2017/09/30/2、前端支持换肤功能/" itemprop="url">2、前端支持换肤功能</a></h1>
+          <h1 class="post-title" itemprop="name headline"></h1>
         
 
         <div class="post-meta">
@@ -326,9 +327,7 @@
       
 
       
-        
-          
-            <h1 id="前端支持换肤功能"><a href="#前端支持换肤功能" class="headerlink" title="前端支持换肤功能"></a>前端支持换肤功能</h1><h2 id="当前现状"><a href="#当前现状" class="headerlink" title="当前现状"></a>当前现状</h2><p>目前只能加载一套css文件</p>
+        <h1 id="前端支持换肤功能"><a href="#前端支持换肤功能" class="headerlink" title="前端支持换肤功能"></a>前端支持换肤功能</h1><h2 id="当前现状"><a href="#当前现状" class="headerlink" title="当前现状"></a>当前现状</h2><p>目前只能加载一套css文件</p>
 <h2 id="存在问题"><a href="#存在问题" class="headerlink" title="存在问题"></a>存在问题</h2><p>不支持换肤功能，不够灵活</p>
 <h2 id="目标"><a href="#目标" class="headerlink" title="目标"></a>目标</h2><p>组件库及平台支持换肤功能，能够灵活的增加/切换皮肤</p>
 <h2 id="方案分析"><a href="#方案分析" class="headerlink" title="方案分析"></a>方案分析</h2><h3 id="公共资源文件不进行webpack打包，单独引入"><a href="#公共资源文件不进行webpack打包，单独引入" class="headerlink" title="公共资源文件不进行webpack打包，单独引入"></a>公共资源文件不进行webpack打包，单独引入</h3><p>将vue、vue-router、vuex、element不进行打包</p>
@@ -346,8 +345,6 @@
 <h2 id="核心逻辑实现"><a href="#核心逻辑实现" class="headerlink" title="核心逻辑实现"></a>核心逻辑实现</h2><h3 id="webpack不打包"><a href="#webpack不打包" class="headerlink" title="webpack不打包"></a>webpack不打包</h3><p>externals中增加如下代码<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">// &#123;&quot;vue&quot;: &apos;Vue&apos;&#125;,</div><div class="line">   // &#123;&quot;vue-router&quot;: &quot;VueRouter&quot;&#125;,</div><div class="line">   // &#123;&quot;vuex&quot;: &quot;Vuex&quot;&#125;,</div></pre></td></tr></table></figure></p>
 <h3 id="ifbp-element仓库修改"><a href="#ifbp-element仓库修改" class="headerlink" title="ifbp-element仓库修改"></a>ifbp-element仓库修改</h3><p>themes.js<br>将theme-red中的var.css内容拼接至theme-default/src/common/var.css，然后通过postcss来打包产出css</p>
 <h3 id="根据cookie来引入不同的css文件"><a href="#根据cookie来引入不同的css文件" class="headerlink" title="根据cookie来引入不同的css文件"></a>根据cookie来引入不同的css文件</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">var theme = &apos;default&apos;;</div><div class="line">    if (u.getCookie(&apos;ifbp-theme&apos;)) &#123;</div><div class="line">      theme = u.getCookie(&apos;ifbp-theme&apos;)</div><div class="line">    &#125;</div><div class="line">    var module = &apos;css!&apos; + &apos;/trd/ifbp-element/theme-&apos; + theme + &apos;/index.css&apos;;</div><div class="line">    require([module])</div></pre></td></tr></table></figure>
-          
-        
       
     </div>
     
@@ -364,12 +361,12 @@
       
 
       
+      
+      
 
       
 
       
-      
-        <div class="post-eof"></div>
       
     </footer>
   </div>
@@ -379,10 +376,11 @@
   </article>
 
 
-    
-  </section>
 
-  
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -390,6 +388,10 @@
 
 
           
+  <div class="comments" id="comments">
+    
+  </div>
+
 
         </div>
         
@@ -410,8 +412,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           
             <p class="site-author-name" itemprop="name">Liu YueKai</p>
@@ -454,6 +465,22 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#前端支持换肤功能"><span class="nav-number">1.</span> <span class="nav-text">前端支持换肤功能</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#当前现状"><span class="nav-number">1.1.</span> <span class="nav-text">当前现状</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#存在问题"><span class="nav-number">1.2.</span> <span class="nav-text">存在问题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#目标"><span class="nav-number">1.3.</span> <span class="nav-text">目标</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#方案分析"><span class="nav-number">1.4.</span> <span class="nav-text">方案分析</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#公共资源文件不进行webpack打包，单独引入"><span class="nav-number">1.4.1.</span> <span class="nav-text">公共资源文件不进行webpack打包，单独引入</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#element组件库支持产出不同主题"><span class="nav-number">1.4.2.</span> <span class="nav-text">element组件库支持产出不同主题</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#核心逻辑实现"><span class="nav-number">1.5.</span> <span class="nav-text">核心逻辑实现</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#webpack不打包"><span class="nav-number">1.5.1.</span> <span class="nav-text">webpack不打包</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ifbp-element仓库修改"><span class="nav-number">1.5.2.</span> <span class="nav-text">ifbp-element仓库修改</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#根据cookie来引入不同的css文件"><span class="nav-number">1.5.3.</span> <span class="nav-text">根据cookie来引入不同的css文件</span></a></li></ol></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
